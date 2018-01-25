@@ -1,0 +1,11 @@
+<% usage =
+    "Open the 'Pre-Meeting Chats Staff List' spreadsheet,\n" +
+    "select all with Ctrl-A, copy to clipboard with Ctrl-C,\n" +
+    "then click here and paste with Ctrl-V"
+%>
+
+<%= form_tag meeting_randomize_path do %>
+  <%= text_area_tag :pre_meeting_sheet, @pre_meeting_sheet, size: '60x20', autofocus: true, placeholder: usage %>
+  <%= button_tag 'Make pairs' %>
+  <%= text_area_tag :meeting_pairs, @meeting_pairs, size: '60x20' %>
+<% end %>
